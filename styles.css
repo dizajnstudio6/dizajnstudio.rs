@@ -1543,3 +1543,23 @@ footer {
   margin: 0;
   box-sizing: border-box;
 }
+
+
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (min-width: 0px) and (max-width: 100px) {
+  .blog-carousel-container {
+    padding: 0 50px 20px;
+  }
+  .blog-carousel-prev {
+    left: -40px;
+  }
+  .blog-carousel-next {
+    right: -40px;
+  }
+  .blog-carousel-arrow {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+}
+
