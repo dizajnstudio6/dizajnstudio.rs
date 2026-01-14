@@ -194,11 +194,126 @@ body {
 
 
 /* TEAM */
-.team { padding:100px 40px; text-align:center; background:#f0f0f0; width: 100%; margin: 0; box-sizing: border-box;}
+.team { padding:80px 20px; text-align:center; background:#f0f0f0; width: 100%; margin: 0; box-sizing: border-box;}
+.team h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
 .team-grid{display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
 .team-member{background:#fff; padding:20px; border-radius:12px; width:220px; text-align:center; transition:transform 0.4s; perspective:1000px;}
 .team-member img{width:120px; height:120px; border-radius:50%; object-fit:cover;}
 .team-member.flip:hover{transform:rotateY(180deg);}
+
+/* Blog Items Wrapper */
+.blog-items-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Blog Item (text + carousel) */
+.blog-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blog-item-text {
+  flex: 1 1 300px;
+  max-width: 500px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
+}
+
+.blog-item-text p {
+  margin: 0;
+}
+
+/* Blog Carousel Container */
+.blog-carousel-container {
+  position: relative;
+  flex: 1 1 400px;
+  max-width: 500px;
+  padding: 0 20px 20px;
+  background: transparent;
+}
+
+.blog-carousel {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  overflow: visible;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  background: transparent;
+}
+
+.blog-carousel-slide {
+  display: none;
+  width: 100%;
+  position: relative;
+}
+
+.blog-carousel-slide.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.blog-carousel-slide img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 15px;
+}
+
+.blog-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  z-index: 10;
+  user-select: none;
+}
+
+.blog-carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.blog-carousel-prev {
+  left: 20px;
+}
+
+.blog-carousel-next {
+  right: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /* FAQ */
 .faq{padding:100px 40px; text-align:center; width: 100%; margin: 0; box-sizing: border-box;}
@@ -504,8 +619,71 @@ body {
 }
 
 /* -------------------- RESPONSIVE -------------------- */
+@media (min-width: 100px) and (max-width: 600px) {
+  .blog-item {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .blog-item-text {
+    text-align: center;
+    max-width: 100%;
+    flex: 1 1 100%;
+    order: 2;
+  }
+  .blog-carousel-container {
+    padding: 0 10px 20px;
+    max-width: 90%;
+    flex: 1 1 100%;
+    order: 1;
+    background: transparent;
+  }
+  .blog-carousel {
+    min-height: 300px;
+    background: transparent;
+  }
+}
+
 @media(max-width:768px) {
   .onama-wrapper { flex-direction: column; }
+  .team {
+    padding: 60px 20px;
+  }
+  .blog-items-wrapper {
+    gap: 40px;
+  }
+  .blog-item {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .blog-item-text {
+    text-align: center;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .blog-carousel-container {
+    padding: 0 10px 20px;
+    max-width: 90%;
+    flex: 1 1 100%;
+    background: transparent;
+  }
+  .blog-carousel {
+    min-height: 300px;
+    background: transparent;
+  }
+  .blog-carousel-arrow {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+  }
+  .blog-carousel-prev {
+    left: 10px;
+  }
+  .blog-carousel-next {
+    right: 10px;
+  }
+  .team h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
 }
 
 
