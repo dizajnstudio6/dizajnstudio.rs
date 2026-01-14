@@ -166,6 +166,48 @@ function animateCursor() {
 
 animateCursor();
 
+// -------------------- BLOG CAROUSEL --------------------
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector('.blog-carousel');
+  const slides = document.querySelectorAll('.blog-carousel-slide');
+  const prevBtn = document.querySelector('.blog-carousel-prev');
+  const nextBtn = document.querySelector('.blog-carousel-next');
+  
+  if (!carousel || !slides.length || !prevBtn || !nextBtn) return;
+  
+  let currentSlide = 0;
+  
+  function showSlide(index) {
+    // Remove active class from all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    // Ensure index is within bounds
+    if (index < 0) {
+      currentSlide = slides.length - 1;
+    } else if (index >= slides.length) {
+      currentSlide = 0;
+    } else {
+      currentSlide = index;
+    }
+    
+    // Add active class to current slide
+    slides[currentSlide].classList.add('active');
+  }
+  
+  // Previous button
+  prevBtn.addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+  });
+  
+  // Next button
+  nextBtn.addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+  });
+  
+  // Initialize first slide
+  showSlide(0);
+});
+
 
 
 
