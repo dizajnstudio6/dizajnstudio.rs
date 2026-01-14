@@ -647,8 +647,8 @@ body {
     order: 2;
   }
   .blog-carousel-container {
-    padding: 0 70px 20px;
-    max-width: 90%;
+    padding: 0 60px 20px;
+    max-width: 95%;
     flex: 1 1 100%;
     order: 1;
     background: transparent;
@@ -658,28 +658,14 @@ body {
     background: transparent;
   }
   .blog-carousel-prev {
-    left: -60px;
+    left: -50px;
   }
   .blog-carousel-next {
-    right: -60px;
+    right: -50px;
   }
   .blog-carousel-arrow {
     font-size: 1.5rem;
     padding: 10px 15px;
-  }
-}
-
-/* iPhone specific - ensure arrows are outside */
-@media (min-width: 320px) and (max-width: 428px) {
-  .blog-carousel-container {
-    padding: 0 70px 20px !important;
-    max-width: 85% !important;
-  }
-  .blog-carousel-prev {
-    left: -60px !important;
-  }
-  .blog-carousel-next {
-    right: -60px !important;
   }
 }
 
