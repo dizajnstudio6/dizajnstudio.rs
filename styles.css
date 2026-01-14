@@ -619,6 +619,22 @@ body {
 }
 
 /* -------------------- RESPONSIVE -------------------- */
+@media (min-width: 0px) and (max-width: 100px) {
+  .blog-carousel-container {
+    padding: 0 50px 20px;
+  }
+  .blog-carousel-prev {
+    left: -40px;
+  }
+  .blog-carousel-next {
+    right: -40px;
+  }
+  .blog-carousel-arrow {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+}
+
 @media (min-width: 100px) and (max-width: 600px) {
   .blog-item {
     flex-direction: column;
@@ -631,8 +647,8 @@ body {
     order: 2;
   }
   .blog-carousel-container {
-    padding: 0 60px 20px;
-    max-width: 95%;
+    padding: 0 70px 20px;
+    max-width: 90%;
     flex: 1 1 100%;
     order: 1;
     background: transparent;
@@ -642,14 +658,28 @@ body {
     background: transparent;
   }
   .blog-carousel-prev {
-    left: -50px;
+    left: -60px;
   }
   .blog-carousel-next {
-    right: -50px;
+    right: -60px;
   }
   .blog-carousel-arrow {
     font-size: 1.5rem;
     padding: 10px 15px;
+  }
+}
+
+/* iPhone specific - ensure arrows are outside */
+@media (min-width: 320px) and (max-width: 428px) {
+  .blog-carousel-container {
+    padding: 0 70px 20px !important;
+    max-width: 85% !important;
+  }
+  .blog-carousel-prev {
+    left: -60px !important;
+  }
+  .blog-carousel-next {
+    right: -60px !important;
   }
 }
 
@@ -1543,23 +1573,3 @@ footer {
   margin: 0;
   box-sizing: border-box;
 }
-
-
-
-/* -------------------- RESPONSIVE -------------------- */
-@media (min-width: 0px) and (max-width: 100px) {
-  .blog-carousel-container {
-    padding: 0 50px 20px;
-  }
-  .blog-carousel-prev {
-    left: -40px;
-  }
-  .blog-carousel-next {
-    right: -40px;
-  }
-  .blog-carousel-arrow {
-    font-size: 1.2rem;
-    padding: 8px 12px;
-  }
-}
-
