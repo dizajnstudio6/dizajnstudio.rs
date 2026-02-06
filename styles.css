@@ -851,17 +851,32 @@ section#reviews{
   .qr-section-grid{
     display:grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    justify-items: center;   /* centriraj kartice u svojim kolona */
+    gap: 10px;
+    justify-items: center;   /* centriraj kartice u svojim kolonama */
   }
   .qr-crop{
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
   }
 
   /* Footer – na mobilnom ne prikazuj listu sekcija, samo naslov + ikonice */
   .footer-menu{
     display:none;
+  }
+}
+
+/* Dodatno poravnanje navbara i logo teksta levo na najmanjim ekranima
+   (da se u galeriji lepo vidi dugme Nazad / Back) */
+@media (max-width: 400px){
+  .site-header .container{
+    padding-left: 8px;
+    padding-right: 12px;
+  }
+  .gallery-page .site-header .brand{
+    margin-left: 0;
+  }
+  .gallery-page .site-header .brand img{
+    width: 38px;
   }
 }
 
@@ -908,8 +923,10 @@ section#reviews{
 }
 
 
-/* Navbar – tamna tema, akcent na hover */
-header {
+/* Navbar – tamna tema, akcent na hover (koristilo se na starom portfolio sajtu).
+   Sada je zadato da NE utiče na novi glavni .site-header, već samo na header
+   elemente u starom layout-u (bez klase .site-header). */
+header:not(.site-header) {
   position: fixed;
   top: 0;
   left: 0;
@@ -927,7 +944,7 @@ header {
   flex-wrap: wrap;
   gap: 10px;
 }
-header.scrolled {
+header.scrolled:not(.site-header) {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 .logo {
