@@ -1,581 +1,691 @@
-
 <!DOCTYPE html>
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dizajn Studio</title>
+  <title>Dizajn Studio — Premium Web &amp; Branding Studio</title>
+  <meta name="description" content="Premium web i grafički dizajn, branding i vizuelni identitet. Dizajn koji izgleda vrhunski i jasno komunicira vrednost vašeg brenda.">
+  <meta name="keywords" content="dizajn studio, web dizajn, grafički dizajn, branding, vizuelni identitet, izrada sajta, dizajn logotipa, promotivni materijal, dizajn CV, Despotovac">
+  <meta name="author" content="Dizajn Studio RS">
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://dizajnstudio.rs/">
+  <link rel="alternate" href="https://dizajnstudio.rs/" hreflang="sr">
+  <link rel="alternate" href="https://dizajnstudio.rs/en/" hreflang="en">
+  <link rel="alternate" href="https://dizajnstudio.rs/" hreflang="x-default">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sr_RS">
+  <meta property="og:title" content="Dizajn Studio — Premium Web &amp; Branding Studio">
+  <meta property="og:description" content="Premium web i grafički dizajn, branding i vizuelni identitet. Moderan, čist i profesionalan dizajn za vaš brend.">
+  <meta property="og:url" content="https://dizajnstudio.rs/">
+  <meta property="og:site_name" content="Dizajn Studio">
+  <meta property="og:image" content="https://dizajnstudio.rs/images/veb1.jpg">
+  <meta property="og:image:alt" content="Dizajn Studio — prikaz premium web i grafičkog dizajna">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dizajn Studio — Premium Web &amp; Branding Studio">
+  <meta name="twitter:description" content="Premium web i grafički dizajn, branding i vizuelni identitet.">
+  <meta name="twitter:image" content="https://dizajnstudio.rs/images/veb1.jpg">
+  <link rel="icon" type="image/png" href="images/logods-removebg-preview.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <script src="script.js" defer></script>
+
+  <!-- Structured data: WebSite + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://dizajnstudio.rs/#website",
+        "url": "https://dizajnstudio.rs/",
+        "name": "Dizajn Studio",
+        "description": "Premium web i grafički dizajn, branding i vizuelni identitet.",
+        "inLanguage": "sr-RS",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://dizajnstudio.rs/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://dizajnstudio.rs/#organization",
+        "name": "Dizajn Studio RS",
+        "url": "https://dizajnstudio.rs/",
+        "logo": "https://dizajnstudio.rs/images/logods-removebg-preview.png",
+        "sameAs": [
+          "https://www.instagram.com/dizajnstudio.rs/",
+          "https://www.tiktok.com/@dizajn.studio",
+          "https://www.facebook.com/share/1BpMcq2Bpg/?mibextid=wwXIfr"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Despotovac",
+          "postalCode": "35213",
+          "addressCountry": "RS"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+381628210863",
+          "contactType": "customer service",
+          "areaServed": "RS"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<!-- HEADER -->
-<header> 
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="Dizajn Studio">
+      <img src="images/logods-removebg-preview.png" alt="Dizajn Studio">
+      <div>
+        <strong>Dizajn Studio</strong>
+        <span>Web • Branding • Grafički dizajn</span>
+      </div>
+    </a>
 
-<div class="logo">
-  <img src="images/logods-removebg-preview.png" alt="Dizajn Studio Logo" class="logo-short">
-  <span class="logo-full">Dizajn Studio</span>
-</div>
+    <!-- ORIGINAL hamburger meni iz portfolio verzije -->
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="Otvori meni">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-
-
-  <button class="hamburger-menu" id="hamburgerMenu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <nav class="main-nav" id="mainNav">
-    <ul class="nav-links">
-      <li><a href="#hero">Početna</a></li>
-      <li><a href="#usluge">Usluge</a></li>
-      <li><a href="#portfolio">Projekti</a></li>
-      <li><a href="#shop">Shop</a></li> 
-      <li><a href="#onama">O nama</a></li>
-      <li><a href="#projekti">Sajtovi</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="gallery.html">Galerija</a></li>
-      <li><a href="#tim">Radovi</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>  
-
-
-      <li class="lang-switch"><a href="#">SRB</a></li>
-      <li class="lang-switch"><a href="/en/index.html">ENG</a></li>
-    </ul>
-  </nav>
+    <nav class="main-nav" id="mainNav" aria-label="Glavni meni">
+      <ul class="nav-links">
+        <li><a href="#services">Usluge</a></li>
+        <li><a href="#promo">Shop</a></li>
+        <li><a href="#work">Radovi</a></li>
+        <li><a href="#process">Proces</a></li>
+        <li><a href="#packages">Ponuda</a></li>
+        <li><a href="#about">O nama</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="cta" href="#contact">Kontakt</a></li>
+        <li><a href="gallery.html">Galerija</a></li>
+        <!-- Original desktop jezičko dugme u sklopu navbara -->
+        <li class="lang">
+          <a href="#" aria-current="page">SRB</a>
+          <a href="/en/index.html">ENG</a>
+        </li>
+      </ul>
+      <!-- Jezičko dugme za hamburger meni (mobilni), skrivamo ga na desktopu u CSS-u -->
+      <ul class="lang-switch">
+        <li><a href="#" aria-current="page">SRB</a></li>
+        <li><a href="/en/index.html">ENG</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-
-<!-- HERO WITH PARALLAX -->
-<section id="hero" class="hero-parallax">
-  <div class="hero-content fade-up">
-    <h1>Dizajn Studio</h1>.
-    <p>Dobrodošli u Dizajn Studio, mesto gde ideje postaju vizuelna rešenja.  <br> 
-      Kreiramo moderan, funkcionalan i upečatljiv dizajn koji gradi vaš brend. </p>
-    <a href="#portfolio" class="btn">Pogledaj projekte</a>
-  </div>
-  <div class="hero-bg">
-    <video autoplay muted loop playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;">
-      <source src="videos/diyajn landscape.mp4" type="video/mp4">
-      Vaš browser ne podržava video tag.
-    </video>
-  </div>
-</section> 
-
-
-
-<!-- USLUGE -->
-<section id="usluge" class="services fade-up">
-  <h2>Naše Usluge</h2>
-  <div class="services-grid">
-
-    <div class="service-card float">
-      <h3>Web dizajn</h3>
-      <p>Animirani, moderni i responsive sajtovi prilagođeni svim uređajima.</p>
-      <div class="service-img">
-        <img src="images/veb1.jpg" alt="Web Design" loading="lazy">
-      </div>
-    </div>
-
-    <div class="service-card float">
-      <h3>Branding</h3>
-      <p>Logo, paleta boja i kompletan vizuelni identitet za vaš brend.</p>
-      <div class="service-img">
-        <img src="images/brand1.png" alt="Branding" loading="lazy">
-      </div> 
-    </div> 
-
-
-    <div class="service-card float">
-      <h3>Personalizovane pozivnice</h3>
-      <p>Kreiramo elegantne i personalizovane pozivnice za sve vrste događaja.</p>
-      <div class="service-img">
-        <img src="images/invite1.jpg" alt="Branding" loading="lazy">
-      </div>
-    </div>
-
-  
-    <div class="service-card float">
-      <h3>Izrada CV i portfolia </h3>
-      <p>Izrađujemo CV/ Portfolio koji ističe vaše veštine i iskustvo. </p>
-      <div class="service-img">
-        <img src="images/cv1.jpg" alt="Branding" loading="lazy">
-      </div>
-    </div>
-
-    <div class="service-card float">
-      <h3>Dizajniranje jelovnika </h3>
-      <p>Dizajniramo vizuelno privlačne menije i jelovnike za restorane i kafiće.</p>
-      <div class="service-img">
-        <img src="images/menu3.jpg" alt="Branding" loading="lazy">
-      </div>
-    </div>
-
-    
-    <div class="service-card float">
-      <h3>Prezentacije </h3>
-      <p>Pravimo uredne prezentacije prilagođene poslovnim, školskim i promotivnim potrebama.</p>
-      <div class="service-img">
-        <img src="images/prez2.jpg" alt="Branding" loading="lazy">
-      </div>
-    </div>
-
-    
-    <div class="service-card float">
-      <h3>Vizit karte</h3>
-      <p>Kreiramo vizit karte koje ističu identitet vašeg brenda i ostavljaju snažan prvi utisak.</p>
-      <div class="service-img">
-        <img src="images/IMG_9499.jpg" alt="Branding" loading="lazy">
-      </div>
-    </div>
-
-    <div class="service-card float">
-      <h3>Marketing</h3>
-      <p>Digitalni marketing i strategije za veći online uticaj.</p>
-      <div class="service-img">
-        <img src="images/marketing.jpg" alt="Marketing" loading="lazy">
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- PROJEKTI HORIZONTAL SCROLL -->
-<section id="portfolio" class="portfolio fade-up">
-  <h2>Projekti</h2>
-
-  <!-- PRVI RED -->
-  <div class="portfolio-scroll">
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9503.jpg" alt="Laptop Workspace" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9506.jpg" alt="Creative Work" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9507 (1).jpg" alt="Design Desk" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9508.jpg" alt="Workspace" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9560.jpg" alt="Laptop Setup" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9552.jpg" alt="Office Table" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9550.jpg" alt="Laptop Workspace" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9502.jpg" alt="Creative Work" loading="lazy">
-      <p></p>
-    </div></a>
-  </div>
-
-  <!-- DRUGI RED -->
-  <div class="portfolio-scroll">
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9516.jpg" alt="Design Desk" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9518.jpg" alt="Workspace" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9519.jpg" alt="Laptop Setup" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9520.jpg" alt="Office Table" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9509.jpg" alt="Laptop Workspace" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9512.jpg" alt="Creative Work" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9513.jpg" alt="Design Desk" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9515.jpg" alt="Workspace" loading="lazy">
-      <p></p>
-    </div></a>
-  </div>
-
-  <!-- TREĆI RED -->
-  <div class="portfolio-scroll">
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9542.jpg" alt="Laptop Setup" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9539.jpg" alt="Office Table" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9528.jpg" alt="Laptop Workspace" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9548.jpg" alt="Creative Work" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9525.jpg" alt="Design Desk" loading="lazy">
-      <p>Projekt 21</p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9527.jpg" alt="Workspace" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9526.jpg" alt="Laptop Setup" loading="lazy">
-      <p></p>
-    </div></a>
-    <a href="gallery.html"><div class="portfolio-item">
-      <img src="images/IMG_9532.jpg" alt="Office Table" loading="lazy">
-      <p></p>
-    </div></a>
-  </div>
-
-</section>
-
-
-
-<!-- SHOP -->
-<section id="shop" class="shop fade-up">
-  <h2>Shop – Novo u ponudi </h2>
-  <p class="shop-text">U našem studiju radimo personalizovani dizajn za majice, šolje, upaljače i olovke. <br> 
-    Svaki motiv, logo ili poruku pretvaramo u moderan i kvalitetan print koji savršeno predstavlja vaš stil ili brend. <br>
-     Idealno za poklone, promocije i unikatne proizvode.</p>
-
-  <div class="shop-grid">
-    <div class="shop-item zoom">
-      <img src="images/shop1.png" alt="">
-      <h3>Personalizovan dizajn za majce</h3>
-      <p>Radimo tekst, slike ili ilustracije po vašoj želji </p>
-      <a class="btn" href="#kontakt">Naruči</a>
-    </div>
-
-    <div class="shop-item zoom">
-      <img src="images/shop5.png" alt="">
-      <h3>Personalizovan dizajn za šolje</h3>
-      <p>Idealno za kafiće, poklon ili za vašu dnevnu dozu kafe</p>
-      <a class="btn" href="#kontakt">Naruči</a>
-    </div>
-
-    <div class="shop-item zoom">
-      <img src="images/shop2.png" alt="">
-      <h3>Personalizovan dizajn za torbe </h3>
-      <p>Minimalistička i moderna estetika.</p>
-      <a class="btn" href="#kontakt">Naruči</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- O NAMA -->
-<section id="onama" class="onama fade-up">
-  <h2>O Nama</h2>
-
-  <div class="onama-wrapper">
-    <div class="onama-text slide-left">
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
       <div>
-        <p>U našem Dizajn Studiju verujemo da dizajn nije samo vizuelni pečat brenda, već snažan alat komunikacije. <br>
-           Svaka ideja nosi svoju energiju, a naš zadatak je da je pretočimo u jasan, estetski i profesionalan izraz.  <br>
-           Kroz pažljivo birane boje, tipografiju i kompoziciju stvaramo dizajn koji ne samo da izgleda lepo, već ima smisao, emociju i svrhu.</p> 
+        <div class="eyebrow">Premium studio za dizajn</div>
+        <h1 class="hero-title">Dizajn koji izgleda vrhunski — i jasno komunicira vrednost.</h1>
+        <p class="hero-sub">Kreiramo web sajtove, branding i grafički dizajn sa jasnom strukturom, čistom estetikom i profesionalnim tonom.</p>
 
-        <p>Svaki proizvod kreiramo sa posebnom pažnjom, kako bi nosio vaš stil, poruku ili brend na prepoznatljiv i kvalitetan način — bilo da je namenjen promociji, poklonu ili ličnoj upotrebi.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Zatraži ponudu</a>
+          <a class="btn btn-ghost" href="#work">Pogledaj radove</a>
+          <a class="btn btn-ghost" href="gallery.html">Galerija</a>
+        </div>
+
+        <div class="hero-metrics" aria-label="Reference">
+          <div class="metric"><strong>40+</strong><span>projekata</span></div>
+          <div class="metric"><strong>20+</strong><span>klijenata</span></div>
+          <div class="metric"><strong>1+</strong><span>godina iskustva</span></div>
+        </div>
       </div>
 
-      <div>
-        <p>Ono što nas vodi kroz svaki projekat jeste posvećenost detaljima, otvorena komunikacija i iskrena želja da krajnji rezultat nadmaši očekivanja.  <br> 
-          Ne težimo samo lepom dizajnu, već dizajnu koji ostavlja utisak, gradi poverenje i traje. Naš cilj je da zajedno sa vama stvorimo vizuelni identitet na koji ćete biti ponosni.</p>
+      <div class="hero-card" aria-hidden="true">
+        <div class="hero-card-media">
+          <img src="images/veb1.jpg" alt="">
+        </div>
       </div>
-    </div> 
-
-    <div class="onama-gallery slide-right">
-      <img src="images/82F00B59-3F6C-4765-BD0A-94B5D2EA0724_L0_001-30. 9. 2025. 09_47_14.PNG" class="gal-img">
-      <img src="images/D1B2F9AA-3156-4426-AC72-B8796F7BD628_L0_001-3. 10. 2025. 02_49_33.PNG" class="gal-img">
-      <img src="images/IMG_9562.jpg" class="gal-img">
-      <img src="images/B2EA6D34-8DD0-4865-9601-6858032808A4_L0_001-30. 9. 2025. 09_17_40.PNG" class="gal-img"> 
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Sajtovi -->
-<section id="projekti" class="projekti fade-up">
-  <h2>Naši Sajtovi</h2>
-
-  <div class="projekti-grid">
-    <a href="https://nailsbydaca.com" target="_blank" style="text-decoration: none; color: inherit;">
-    <div class="projekat-card float">
-      <img src="images/dacalogodizajn.jpg">
-      <h3>Nails by Daca</h3>
-      <p>Dizajniran da istakne eleganciju i stil kroz čistu estetiku i vizuelno privlačan prikaz usluga.</p>
-    </div>
-    </a>
-
-    <a href="https://ledneonnatpisisvilajnac.com" target="_blank" style="text-decoration: none; color: inherit;">
-    <div class="projekat-card float">
-      <img src="images/ledlogodizajn.jpg">
-      <h3>Led Neon Natpisi</h3>
-      <p>Naglašavajući stil, atmosferu i jedinstvenost prostora kroz dizajn koji osvaja pogled odmah.</p>
-    </div>
-    </a>
-
-    <div class="projekat-card float">
-      <img src="images/dizajn studio logo nov.png">
-      <h3>Ivona Portfolio</h3>
-      <p>Trenutno u izradi</p>
-    </div>
-
-    <div class="projekat-card float">
-      <img src="images/lashlogodizajn.jpg">
-      <h3>T Lashes</h3>
-      <p>Trenutno u izradi</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- BLOG -->
-<section id="blog" class="blog fade-up">
-  <h2>Mini Blog – Saveti & Inspiracija</h2> 
-
-  <div class="blog-grid">
-    <div class="blog-card zoom" style="display: flex; flex-direction: column;">
-      <img src="images/blog5.jpg">
-      <h3>Standardni paket</h3>
-      <p>
-        <p>Akcija traje do 8. januara, zato nas pratite i ne propustite priliku za novi novogodišnji paket!</p> 
-        <br> 
-
-        <li>
-        <ol>Dizajn vizit karti, 2 varijante</ol></li> 
-        <li><ol>Logo po meri, 3 varijante</ol></li>
-          <li><ol>Kratki promo video</ol></li> 
-          <li><ol>Demo video sajt u vidu reelsa</ol></li>
-        </p>
-      <p style="margin-top: auto; font-weight: 600; padding-top: 10px;">Cena: 4.800 RSD</p>
-    </div>
-
-    <div class="blog-card zoom">
-      <img src="images/blog3.jpg">
-      <h3>Novogodišnja akcija!</h3>
-      <p>Povodom predstojećih praznika, pripremili smo posebnu ponudu za sve naše usluge dizajna. <br> 
-        Ovo je idealna prilika da osvežite svoj brend, vizit karte, logotipe, prezentacije i promotivne materijale uz kreativna i profesionalna rešenja.
-
-        Akcija traje do 8. januara, zato nas pratite i ne propustite priliku da svoje projekte podignete na novi nivo i unesete svežinu u vizuelni identitet za novu godinu!</p>
-    </div> 
-
-    <div class="blog-card zoom"> 
-      <img src="images/blog2.jpg"> 
-      <h3>Šta je zapravo Mini Blog?</h3>
-      <p> U ovom delu sajta redovno objavljujemo aktuelne akcije, posebne ponude i sve naše aktivne promocije. <br>
-        Ovde ćete prvi saznati za nove popuste, specijalne ponude i eventualne giveaway kampanje. <br> 
-         Blog se ažurira svakodnevno, pa vas pozivamo da nas redovno pratite i budete u toku sa svim novostima koje pripremamo. </p>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<!-- TIM -->
-<section id="tim" class="team fade-up">
-  <h2>Dizajn Studio- Blog</h2>
-  <div class="blog-items-wrapper">
-    <div class="blog-item">
-      <div class="blog-item-text">
-        <p>Ovaj vodič je primer sadržaja koji kreiramo – od ideje do finalnog izgleda. Pišemo originalne, informativne i zanimljive tekstove, prilagođene turističkim projektima, brendovima i društvenim mrežama.</p>
-        <p>Pored pisanja, uređujemo i prilagođavamo sadržaj za objave, biramo fotografije, radimo obradu slika, kao i vizuelni dizajn kompletnog materijala. Tekst, fotografije i dizajn povezujemo u jednu jasnu i estetski usklađenu celinu.</p>
-        <p>Ovaj vodič pokazuje kako možemo da osmislimo, napišemo, vizuelno oblikujemo i pripremimo gotov materijal – spreman za web, društvene mreže ili štampu. Svaki projekat prilagođavamo potrebama klijenta i nameni sadržaja.</p>
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Usluge</div>
+        <div class="h2">Jasna ponuda. Precizan dizajn. Premium utisak.</div>
+        <p class="lead">Bavimo se web dizajnom, brendingom i grafičkim materijalima. Isporučujemo rešenja koja izgledaju profesionalno, a pritom su jasna i upotrebljiva.</p>
       </div>
-      <div class="blog-carousel-container">
-        <div class="blog-carousel">
-          <div class="blog-carousel-slide active">
-            <img src="images/dsp1.png" alt="Blog Image">
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Web dizajn &amp; izrada sajta</h3>
+          <p>Moderni, responsive sajtovi sa čistom strukturom, brzim učitavanjem i sadržajem koji vodi korisnika do akcije.</p>
+        </div>
+        <div class="card">
+          <h3>Branding &amp; vizuelni identitet</h3>
+          <p>Logo, boje, tipografija i pravila korišćenja — kompletan identitet koji izgleda dosledno na svim kanalima.</p>
+        </div>
+        <div class="card">
+          <h3>Grafički dizajn</h3>
+          <p>Vizit karte, meniji, pozivnice, prezentacije i promo materijali — spremno za štampu i digital.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:18px" class="grid grid-3">
+        <div class="card">
+          <h3>CV &amp; portfolio</h3>
+          <p>Uredan, moderan CV/portfolio koji ističe najvažnije i izgleda premium.</p>
+        </div>
+        <div class="card">
+          <h3>Promotivni proizvodi</h3>
+          <p>Dizajn za majice, šolje, torbe i ostalo — vizuelno čisto, brending‑friendly i spremno za štampu.</p>
+        </div>
+        <div class="card">
+          <h3>Marketing vizuali</h3>
+          <p>Vizuali za društvene mreže i kampanje — u tonu brenda, bez šuma i bez improvizacije.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="promo" class="section promo">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Promotivni proizvodi</div>
+        <div class="h2">Dizajn za štampu koji izgleda premium</div>
+        <p class="lead">Pripremamo dizajne za promo materijale koji su čisti, čitljivi i spremni za proizvodnju — od ideje do finala.</p>
+      </div>
+
+      <div class="grid grid-3 promo-grid">
+        <div class="card promo-card">
+          <div class="promo-media promo-media-shirt"><img src="images/promo-tshirt.png" alt="Dizajn za majice" loading="lazy"></div>
+          <h3>Majice</h3>
+          <p>Tipografija, ilustracije i brending varijante — prilagođeno boji majice i štampi.</p>
+        </div>
+        <div class="card promo-card">
+          <div class="promo-media promo-media-mug"><img src="images/promo-cup.png" alt="Dizajn za šolje" loading="lazy"></div>
+          <h3>Šolje</h3>
+          <p>Minimalistički ili “statement” dizajn — odličan za poklone, kafiće i kampanje.</p>
+        </div>
+        <div class="card promo-card">
+          <div class="promo-media promo-media-earth"><img src="images/promo-bag.png" alt="Dizajn za cegere i torbe" loading="lazy"></div>
+          <h3>Torbe / cegeri</h3>
+          <p>Brending koji se vidi iz daljine — čist kontrast i jasna poruka bez pretrpavanja.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
+        <a class="btn btn-primary" href="#contact">Zatraži ponudu</a>
+        <a class="btn" href="gallery.html">Pogledaj primere</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Radovi</div>
+        <div class="h2">Izabrani web projekti</div>
+        <p class="lead">Od čistih, elegantnih sajtova do vizuelno snažnih brend prezentacija. Ispod su izdvojeni projekti + mini pregled radova.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <a class="card work-card" href="https://nailsbydaca.com" target="_blank" rel="noopener" style="text-decoration:none">
+          <div class="work-thumb"><img src="images/dacalogodizajn.jpg" alt="Nails by Daca"></div>
+          <div class="work-body">
+            <h3>Nails by Daca</h3>
+            <p>Elegantna prezentacija usluga sa jasnom hijerarhijom i premium tipografijom.</p>
+            <div class="work-meta"><span class="tag">Web</span><span class="tag">Branding</span></div>
           </div>
-          <div class="blog-carousel-slide">
-            <img src="images/dsp2.png" alt="Blog Image">
+        </a>
+
+        <a class="card work-card" href="https://ledneonnatpisisvilajnac.com" target="_blank" rel="noopener" style="text-decoration:none">
+          <div class="work-thumb"><img src="images/ledlogodizajn.jpg" alt="Led Neon Natpisi"></div>
+          <div class="work-body">
+            <h3>Led Neon Natpisi</h3>
+            <p>Vizuelno snažan sajt sa fokusom na ponudu, reference i brzu konverziju.</p>
+            <div class="work-meta"><span class="tag">Web</span><span class="tag">UI</span></div>
           </div>
-          <div class="blog-carousel-slide">
-            <img src="images/dsp3.png" alt="Blog Image">
+        </a>
+
+        <a class="card work-card" href="https://ivonamilosevic.com" target="_blank" rel="noopener" style="text-decoration:none">
+          <div class="work-thumb"><img src="images/dizajn studio logo nov.png" alt="Ivona Milošević Portfolio"></div>
+          <div class="work-body">
+            <h3>Ivona Milošević</h3>
+            <p>Portfolio sa jasnim narativom, čistim layout‑om i naglaskom na radove.</p>
+            <div class="work-meta"><span class="tag">Portfolio</span><span class="tag">Web</span></div>
           </div>
-          <div class="blog-carousel-slide">
-            <img src="images/dsp4.png" alt="Blog Image">
-          </div>
-          <div class="blog-carousel-slide">
-            <img src="images/dsp5.png" alt="Blog Image">
-          </div>
-          <div class="blog-carousel-slide">
-            <img src="images/dsp6.png" alt="Blog Image">
-          </div>
-          <div class="blog-carousel-slide">
-            <img src="images/dsp7.png" alt="Blog Image">
-          </div>
-          <div class="blog-carousel-slide">
-            <img src="images/dsp8.png" alt="Blog Image">
-          </div>
-          <div class="blog-carousel-slide">
-            <img src="images/dsp9.png" alt="Blog Image">
-          </div>
-          <div class="blog-carousel-slide">
-            <img src="images/dsp10.png" alt="Blog Image">
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="process" class="section process">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Proces</div>
+        <div class="h2">Kratko, jasno, bez komplikovanja</div>
+        <p class="lead">Radimo strukturisano — da biste brzo došli do rešenja koje izgleda premium i ima smisao.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Brief &amp; ciljevi</h3>
+              <p>Dogovorimo stil, cilj i obim. Fokus: jasna ponuda i pouzdan utisak.</p>
+            </div>
           </div>
         </div>
-        <button class="blog-carousel-arrow blog-carousel-prev" aria-label="Previous image">&#10094;</button>
-        <button class="blog-carousel-arrow blog-carousel-next" aria-label="Next image">&#10095;</button>
+        <div class="card">
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Dizajn &amp; sadržaj</h3>
+              <p>Kreiramo layout, tipografiju i tekstove koji zvuče profesionalno i prodajno.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Finalizacija</h3>
+              <p>Usklađivanje detalja, priprema za objavu i podrška za naredne korake.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-gallery">
+        <div class="process-gallery-head">
+          <span>Primeri procesa u radu</span>
+          <a class="btn btn-ghost" href="gallery.html">Pogledaj galeriju</a>
+        </div>
+        <div class="process-thumbs" aria-label="Mini galerija procesa">
+          <a href="gallery.html"><img src="images/IMG_9503.jpg" alt="" loading="lazy"></a>
+          <a href="gallery.html"><img src="images/IMG_9508.jpg" alt="" loading="lazy"></a>
+          <a href="gallery.html"><img src="images/IMG_9516.jpg" alt="" loading="lazy"></a>
+          <a href="gallery.html"><img src="images/IMG_9542.jpg" alt="" loading="lazy"></a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FAQ -->
-<section id="faq" class="faq fade-up">
-  <h2>Česta Pitanja</h2>
-  <div class="faq-item">
-    <h3 class="faq-question">Da li dizajnirate vizit karte spremne za štampu?</h3>
-    <p class="faq-answer">Da, sve vizit karte dizajniramo u profesionalnim formatima spremnim za štampu, uz pravilne dimenzije, margine i rezne oznake.</p>
-  </div>
-  <div class="faq-item">
-    <h3 class="faq-question">Da li mogu dobiti digitalnu verziju vizit karte za online deljenje?</h3>
-    <p class="faq-answer">Naravno. Uz dizajn za štampu dobijate i digitalnu verziju vizit karte pogodnu za slanje putem mejla, društvenih mreža ili online platformi.</p>
-  </div>
-  <div class="faq-item">
-    <h3 class="faq-question">Da li je moguća izrada dizajna za više proizvoda odjednom (vizitke, logo, prezentacije)?</h3>
-    <p class="faq-answer">Da, moguće je raditi kompletan dizajn za više proizvoda u okviru jednog projekta, uz vizuelnu usklađenost i jedinstven identitet.</p>
-  </div>
-  <div class="faq-item">
-    <h3 class="faq-question">Da li nudite dizajn za promotivne proizvode poput majica, šolja i olovaka?</h3>
-    <p class="faq-answer">Da, radimo dizajn za različite promotivne i personalizovane proizvode, prilagođene štampi i vašem brendu.</p>
-  </div>
-  <div class="faq-item">
-    <h3 class="faq-question">Da li mogu dobiti više varijanti dizajna za vizit karte?</h3>
-    <p class="faq-answer">Da, nudimo više varijanti dizajna kako biste mogli da izaberete rešenje koje vam najviše odgovara.</p>
-  </div>
-  <div class="faq-item">
-    <h3 class="faq-question">Da li je sajt prilagođen za mobilne telefone i tablete?</h3>
-    <p class="faq-answer">Da, svi naši sajtovi su u potpunosti responsive i prilagođeni prikazu na mobilnim telefonima, tabletima i desktop uređajima.</p>
-  </div>
-  <div class="faq-item">
-    <h3 class="faq-question">Da li mogu kasnije da menjam sadržaj na sajtu?</h3>
-    <p class="faq-answer">Da, sadržaj na sajtu se može naknadno menjati i ažurirati, uz jednostavno održavanje ili uz našu podršku po potrebi.</p>
-  </div>
-</section>
+  <section id="packages" class="section packages">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Ponuda</div>
+        <div class="h2">Paketi (primer)</div>
+        <p class="lead">Cene zavise od obima. Ovo je okvir da klijent odmah razume šta dobija.</p>
+      </div>
 
-<!-- KONTAKT -->
-<section id="kontakt" class="contact fade-up">
-  <h2 style="margin-bottom: 30px;">Kontakt</h2>
-  <div style="display: flex; gap: 100px; align-items: center; flex-wrap: wrap; justify-content: space-between; max-width: 100%; margin: 0; padding: 0 60px;">
-    <div style="text-align: center; flex: 0 0 auto;">
-      <a href="https://www.instagram.com/dizajnstudio.rs/" target="_blank" style="display: block;">
-      <img src="images/qr2insta.png" alt="Instagram QR Code" style="width: 200px; height: 200px; display: block; object-fit: cover; object-position: center;">
-      </a>
-    </div> 
-    <div style="flex: 0 1 400px; min-width: 300px; text-align: center;">
-      <p style="margin-bottom: 20px; font-size: 16px; line-height: 1.8;">Imate pitanje, ideju ili želite saradnju? Slobodno nas kontaktirajte i rado ćemo vam pomoći da vašu zamisao pretvorimo u kvalitetno dizajnersko rešenje. Otvoreni smo za dogovor, konsultacije i brzu komunikaciju.</p>
-      <p style="margin-bottom: 10px; font-size: 16px;">Email (Gmail): dizajnstudio6@gmail.com</p>
-      <hr style="border: none; border-top: 1px solid #ccc; margin: 10px 0; width: 100%;">
-      <p style="margin-bottom: 10px; font-size: 16px;"><a href="tel:+381628210863" style="color: inherit; text-decoration: none;">Telefon</a> / <a href="https://wa.me/381628210863" style="color: inherit; text-decoration: none;">WhatsApp</a> / <a href="viber://chat?number=381628210863" style="color: inherit; text-decoration: none;">Viber</a>: <a href="tel:+381628210863" style="color: inherit; text-decoration: none;">062/ 8210- 863</a></p>
-      <hr style="border: none; border-top: 1px solid #ccc; margin: 10px 0; width: 100%;">
-      <p style="margin-bottom: 10px; font-size: 16px;"><a href="https://www.instagram.com/dizajnstudio.rs/" target="_blank" style="color: inherit; text-decoration: none;">Instagram: @dizajnstudio.rs</a></p>
-      <hr style="border: none; border-top: 1px solid #ccc; margin: 10px 0; width: 100%;">
-      <p style="margin-bottom: 10px; font-size: 16px;"><a href="https://www.tiktok.com/@dizajn.studio" target="_blank" style="color: inherit; text-decoration: none;">TikTok: @dizajn.studio</a></p>
-      <hr style="border: none; border-top: 1px solid #ccc; margin: 10px 0; width: 100%;">
-      <p style="margin-top: 30px; font-size: 16px; line-height: 1.8;">Pišite nam u bilo koje vreme – odgovaramo u najkraćem roku i stojimo vam na raspolaganju za sve informacije i upite.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Start</h3>
+          <p>Za male biznise kojima treba čist online nastup.</p>
+          <div class="price">Na upit <small>po obimu</small></div>
+          <ul class="list">
+            <li>Jednostavan, premium layout</li>
+            <li>Responsive dizajn</li>
+            <li>Osnovni SEO setup</li>
+          </ul>
+          <div style="margin-top:16px"><a class="btn btn-primary" href="#contact">Zatraži ponudu</a></div>
+        </div>
+        <div class="card">
+          <h3>Brand</h3>
+          <p>Kompletan identitet + web nastup.</p>
+          <div class="price">Na upit <small>po obimu</small></div>
+          <ul class="list">
+            <li>Logo + mini brand guide</li>
+            <li>Web sa jasnom hijerarhijom</li>
+            <li>Materijali za mreže (osnovni set)</li>
+          </ul>
+          <div style="margin-top:16px"><a class="btn btn-primary" href="#contact">Zakaži konsultacije</a></div>
+        </div>
+        <div class="card">
+          <h3>Premium</h3>
+          <p>Za brendove kojima treba “wow” i ozbiljna prezentacija.</p>
+          <div class="price">Na upit <small>po obimu</small></div>
+          <ul class="list">
+            <li>Napredni dizajn + animacije po meri</li>
+            <li>Više sekcija, landing logika</li>
+            <li>Optimizacija i podrška</li>
+          </ul>
+          <div style="margin-top:16px"><a class="btn btn-primary" href="#contact">Krenimo</a></div>
+        </div>
+      </div>
     </div>
-    <div style="text-align: center; flex: 0 0 auto;">
-      <a href="https://www.tiktok.com/@dizajn.studio" target="_blank" style="display: block;">
-      <img src="images/qr2tiktok.png" alt="TikTok QR Code" style="width: 200px; height: 200px; display: block; object-fit: cover; object-position: center;">
-      </a>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">O nama</div>
+        <div class="h2">Studio koji spaja estetiku i rezultat</div>
+        <p class="lead">Radimo dizajn koji izgleda premium, ali pre svega funkcioniše: jasno komunicira ponudu, gradi poverenje i vodi korisnika ka akciji.</p>
+        <p class="lead">Za svaku saradnju ulazimo dublje u kontekst brenda – ciljnu grupu, tržište i način komunikacije – kako bismo predložili rešenja koja nisu samo lepa, već i realno primenljiva u vašem svakodnevnom radu.</p>
+        <p class="lead">U praksi to znači da pomažemo i oko strukture ponude, teksta i načina prezentacije, tako da klijent tačno zna šta dobija, a vaši posetioci vrlo jasno razumeju zašto da izaberu baš vas u odnosu na druge.</p>
+      </div>
+
+      <div class="grid grid-3 about-grid">
+        <div class="card">
+          <h3>Profesionalna struktura</h3>
+          <p>Postavljamo hijerarhiju sadržaja i UX tako da korisnik brzo razume: ko ste, šta nudite i kako da vas kontaktira.</p>
+        </div>
+        <div class="card">
+          <h3>Premium vizuelni identitet</h3>
+          <p>Tipografija, boje i kompozicija su dosledni — da brend izgleda ozbiljno na webu i u štampi.</p>
+        </div>
+        <div class="card">
+          <h3>Brza i jasna komunikacija</h3>
+          <p>Radimo transparentno: dogovor, rokovi, revizije i isporuka — bez nejasnoća i improvizacije.</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="map-container" style="margin-top: 40px; width: 100%; height: 400px; border-radius: 8px; overflow: hidden;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.5!2d21.4167!3d44.0833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDA1JzAwLjAiTiAyMcKwMjUnMDAuMSJF!5e0!3m2!1sen!2srs!4v1234567890123!5m2!1sen!2srs" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</section>
+  </section>
 
+  <section id="faq" class="section faq">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">FAQ</div>
+        <div class="h2">Najčešća pitanja</div>
+        <p class="lead">Odgovori na ono što klijenti najčešće pitaju pre saradnje.</p>
+      </div>
 
+      <div class="faq-list">
+        <div class="faq-item" data-open="false">
+          <button class="faq-btn" type="button">
+            <span class="faq-q">Da li dobijam fajlove spremne za štampu?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel">Da — pripremamo profesionalne formate za štampu (dimenzije, margine, rezne oznake) i digital verzije za online upotrebu.</div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-btn" type="button">
+            <span class="faq-q">Da li je sajt prilagođen telefonu?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel">Da — dizajn je responsive i prilagođen mobilnim, tablet i desktop uređajima.</div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-btn" type="button">
+            <span class="faq-q">Da li mogu kasnije menjati sadržaj?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel">Da — sadržaj se može ažurirati. Po potrebi nudimo i podršku za održavanje.</div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-btn" type="button">
+            <span class="faq-q">Koliko traje izrada sajta ili dizajna?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel">Zavisi od obima. Manji sajtovi mogu biti gotovi brzo, dok kompleksniji projekti zahtevaju više faza. Uvek definišemo realan rok na startu.</div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-btn" type="button">
+            <span class="faq-q">Koliko revizija imam u procesu?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel">Revizije dogovaramo unapred po paketu/obimu. Naš cilj je da kroz dobar brief dođemo do rešenja brzo, bez beskonačnih krugova.</div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-btn" type="button">
+            <span class="faq-q">Šta vam je potrebno od mene da krenemo?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel">Kratak opis biznisa, ciljevi, preferencije (stil/boje), primeri koji vam se dopadaju i sav materijal koji već imate (logo, tekst, fotografije).</div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-btn" type="button">
+            <span class="faq-q">Da li radite domen i hosting?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel">Možemo preporučiti i pomoći oko izbora domena i hostinga, kao i oko objave sajta. Sve bude jasno definisano pre realizacije.</div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-btn" type="button">
+            <span class="faq-q">Da li radite i dvojezične sajtove?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-panel">Da — možemo napraviti SRB/ENG (ili više jezika) uz dosledan dizajn i sadržaj prilagođen publici.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Kontakt</div>
+        <div class="h2">Spremni za premium nastup?</div>
+        <p class="lead">Pošaljite upit i dobićete jasan predlog i smernice za dalje korake.</p>
+      </div>
 
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="section-head" style="margin-bottom: 12px">
+            <div class="eyebrow">Studio</div>
+            <div class="h2" style="font-size: 20px; line-height: 1.15">Dizajn Studio RS</div>
+            <p class="lead" style="font-size: 14px; margin-top: 4px;">Despotovac 35213</p>
+          </div>
+          <div class="contact-row">
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:dizajnstudio6@gmail.com">dizajnstudio6@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div>
+              <strong>Telefon / WhatsApp / Viber</strong>
+              <a href="tel:+381628210863">062 8210 863</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div>
+              <strong>Instagram</strong>
+              <a href="https://www.instagram.com/dizajnstudio.rs/" target="_blank" rel="noopener">@dizajnstudio.rs</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div>
+              <strong>TikTok</strong>
+              <a href="https://www.tiktok.com/@dizajn.studio" target="_blank" rel="noopener">@dizajn.studio</a>
+            </div>
+          </div>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn btn-primary" href="mailto:dizajnstudio6@gmail.com">Pošalji email</a>
+            <a class="btn" href="tel:+381628210863">Pozovi</a>
+          </div>
 
+        </div>
 
+        <div class="contact-card">
+          <div class="section-head" style="margin-bottom: 16px">
+            <div class="eyebrow">Osnivač studija</div>
+            <div class="h2" style="font-size: 22px; line-height: 1.15">Ivona Milošević</div>
+            <p class="lead" style="font-size: 14px; margin-bottom: 6px">Web &amp; grafički dizajn • Kreativni smer</p>
+            <div class="eyebrow" style="letter-spacing: 0.10em; font-size: 11px; color: var(--muted); margin-top: 0">Dizajn Studio Despotovac</div>
+          </div>
 
+          <div class="contact-row">
+            <div>
+              <strong>Portfolio</strong>
+              <a href="https://ivonamilosevic.com" target="_blank" rel="noopener">ivonamilosevic.com</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div>
+              <strong>Direktan kontakt (poziv)</strong>
+              <a href="tel:+381628210863">062 8210 863</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div>
+              <strong>Direktan kontakt (email)</strong>
+              <a href="mailto:dizajnstudio6@gmail.com">dizajnstudio6@gmail.com</a>
+            </div>
+          </div>
 
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn btn-primary" href="tel:+381628210863">Pozovi direktno</a>
+            <a class="btn" href="https://ivonamilosevic.com" target="_blank" rel="noopener">Pogledaj portfolio</a>
+            <a class="btn" href="images/cv.pdf" download>Preuzmi CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section id="qr" class="section qr-section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">QR kontakti</div>
+        <div class="h2">Skeniraj i odmah otvori profil</div>
+        <p class="lead">Ako ti je lakše da skeniraš nego da kucaš, ovde su direktni QR linkovi do profila studija.</p>
+      </div>
 
+      <div class="contact-qr-grid qr-section-grid">
+        <a class="card contact-qr-item" href="https://www.instagram.com/dizajnstudio.rs/" target="_blank" rel="noopener" aria-label="Instagram QR">
+          <div class="contact-qr-head">
+            <div>
+              <div class="contact-qr-title">Instagram</div>
+              <div class="contact-qr-sub">@dizajnstudio.rs</div>
+            </div>
+          </div>
+          <div class="qr-crop" aria-hidden="true">
+            <img src="images/qr-instagram.png" alt="" loading="lazy">
+          </div>
+          <div class="qr-caption">Skeniraj kod i otvori profil u aplikaciji.</div>
+        </a>
 
+        <a class="card contact-qr-item" href="https://www.tiktok.com/@dizajn.studio" target="_blank" rel="noopener" aria-label="TikTok QR">
+          <div class="contact-qr-head">
+            <div>
+              <div class="contact-qr-title">TikTok</div>
+              <div class="contact-qr-sub">@dizajn.studio</div>
+            </div>
+          </div>
+          <div class="qr-crop" aria-hidden="true">
+            <img src="images/qr-tiktok.png" alt="" loading="lazy">
+          </div>
+          <div class="qr-caption">Skeniraj kod i pogledaj radove u kratkim videima.</div>
+        </a>
 
+        <a class="card contact-qr-item" href="https://ivonamilosevic.com" target="_blank" rel="noopener" aria-label="Portfolio QR">
+          <div class="contact-qr-head">
+            <div>
+              <div class="contact-qr-title">Portfolio</div>
+              <div class="contact-qr-sub">ivonamilosevic.com</div>
+            </div>
+          </div>
+          <div class="qr-crop" aria-hidden="true">
+            <img src="images/qr-portfolio.png" alt="" loading="lazy">
+          </div>
+          <div class="qr-caption">Skeniraj i otvori portfolio sa radovima.</div>
+        </a>
 
+        <a class="card contact-qr-item" href="https://www.facebook.com/share/1BpMcq2Bpg/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook QR">
+          <div class="contact-qr-head">
+            <div>
+              <div class="contact-qr-title">Facebook</div>
+              <div class="contact-qr-sub">Dizajn Studio RS</div>
+            </div>
+          </div>
+          <div class="qr-crop" aria-hidden="true">
+            <img src="images/qr-facebook.png" alt="" loading="lazy">
+          </div>
+          <div class="qr-caption">Skeniraj i otvori naš Facebook profil.</div>
+        </a>
+      </div>
+    </div>
+  </section>
 
+  <section id="reviews" class="section reviews">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Recenzije</div>
+        <div class="h2">Utisci klijenata</div>
+        <p class="lead">Kratko i konkretno — saradnja, komunikacija i kvalitet isporuke.</p>
+      </div>
 
+      <div class="grid grid-3 reviews-grid">
+        <div class="card review-card">
+          <div class="review-top">
+            <div class="review-name">Bjanca Beauty</div>
+            <div class="review-stars" aria-label="5 od 5 zvezdica">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">“Brza komunikacija, moderan dizajn i sve je bilo spremno na vreme. Preporuka.”</p>
+        </div>
 
+        <div class="card review-card">
+          <div class="review-top">
+            <div class="review-name">Taxi Milošević</div>
+            <div class="review-stars" aria-label="5 od 5 zvezdica">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">“Jasna ponuda, čist vizuelni identitet i profesionalan pristup od početka do kraja.”</p>
+        </div>
 
+        <div class="card review-card">
+          <div class="review-top">
+            <div class="review-name">Fuego Snack Bar</div>
+            <div class="review-stars" aria-label="5 od 5 zvezdica">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">“Dizajn izgleda premium i pregledno — tačno ono što smo želeli za brend.”</p>
+        </div>
 
+        <div class="card review-card">
+          <div class="review-top">
+            <div class="review-name">Make Up by Tijana Miljković</div>
+            <div class="review-stars" aria-label="5 od 5 zvezdica">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">“Sve preporuke — lep dizajn, odlična estetika i super komunikacija.”</p>
+        </div>
 
+        <div class="card review-card">
+          <div class="review-top">
+            <div class="review-name">ULT Miliva</div>
+            <div class="review-stars" aria-label="5 od 5 zvezdica">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">“Uredan dizajn i jasna struktura. Sve je urađeno precizno i u dogovorenom roku.”</p>
+        </div>
 
+        <div class="card review-card">
+          <div class="review-top">
+            <div class="review-name">Jelena Vulić — Domaći kolači</div>
+            <div class="review-stars" aria-label="5 od 5 zvezdica">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="review-text">“Vizuelno prelepo i profesionalno. Sjajno ste pogodili stil i atmosferu brenda.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer>
+<footer class="footer">
   <div class="footer-top">
     <h2>Dizajnirajte sa nama</h2>
     <p>Pridružite se našoj kreativnoj zajednici i unapredite svoj brend.</p>
@@ -583,33 +693,31 @@
 
   <div class="footer-menu">
     <ul>
-      <li><a href="#hero">Početna</a></li>
-      <li><a href="#usluge">Usluge</a></li>
-      <li><a href="#portfolio">Projekti</a></li>
-      <li><a href="#shop">Shop</a></li>
-      <li><a href="#onama">O nama</a></li>
-      <li><a href="#projekti">Sajtovi</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#tim">Radovi</a></li>
+      <li><a href="#services">Usluge</a></li>
+      <li><a href="#promo">Promotivni proizvodi</a></li>
+      <li><a href="#work">Radovi</a></li>
+      <li><a href="#process">Proces</a></li>
+      <li><a href="#packages">Ponuda</a></li>
+      <li><a href="#about">O nama</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+      <li><a href="#qr">QR</a></li>
+      <li><a href="gallery.html">Galerija</a></li>
     </ul>
   </div>
 
   <div class="footer-social">
-    <a href="https://www.instagram.com/dizajnstudio.rs/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@dizajn.studio" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/dizajnstudio.rs/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@dizajn.studio" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/share/1BpMcq2Bpg/?mibextid=wwXIfr" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
     <a href="tel:+381628210863"><i class="fas fa-phone"></i></a>
   </div>
 
   <div class="footer-bottom">
-    <p>Created by <a href="#hero" style="color: #000; text-decoration: none;"><span style="color: #000;">Dizajn Studio</span></a> © 2025 | all rights reserved</p>
-    
-  <!-- Scroll to top dugme -->
-<button id="scrollTop" onclick="scrollToTop()">↑</button>
-
+    <p>Created by <a href="#top" style="color: #000; text-decoration: none;"><span style="color: #000;">Dizajn Studio</span></a> © 2026 | sva prava zadržana</p>
+  </div>
 </footer>
-
 
 </body>
 </html>
+
