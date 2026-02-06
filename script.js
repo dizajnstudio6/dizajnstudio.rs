@@ -263,3 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize first slide
   showSlide(0);
 });
+
+
+
+
