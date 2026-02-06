@@ -8,41 +8,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body class="gallery-page">
 
 <!-- HEADER -->
-<header> 
+<header class="site-header gallery-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Dizajn Studio">
+      <img src="images/logods-removebg-preview.png" alt="Dizajn Studio">
+      <div>
+        <strong>Dizajn Studio</strong>
+        <span>Web • Branding • Grafički dizajn</span>
+      </div>
+    </a>
 
-<div class="logo">
-  <img src="images/logods-removebg-preview.png" alt="Dizajn Studio Logo" class="logo-short">
-  <span class="logo-full">Dizajn Studio</span>
-</div>
-
-
-
-  <button class="hamburger-menu" id="hamburgerMenu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <nav class="main-nav" id="mainNav">
-    <ul class="nav-links">
-      <li><a href="index.html#hero">Početna</a></li>
-      <li><a href="index.html#usluge">Usluge</a></li>
-      <li><a href="index.html#portfolio">Projekti</a></li>
-      <li><a href="index.html#shop">Shop</a></li> 
-      <li><a href="index.html#onama">O nama</a></li>
-      <li><a href="index.html#projekti">Sajtovi</a></li>
-      <li><a href="index.html#blog">Blog</a></li>
-      <li><a href="gallery.html">Galerija</a></li>
-      <li><a href="index.html#tim">Radovi</a></li>
-      <li><a href="index.html#faq">FAQ</a></li>
-      <li><a href="index.html#kontakt">Kontakt</a></li>  
-
-
-      <li class="lang-switch"><a href="#">SRB / ENG</a></li>
-    </ul>
-  </nav>
+    <!-- Back dugme (uvek vidljivo) -->
+    <a class="gallery-back btn btn-ghost" href="index.html" aria-label="Nazad na početnu stranicu">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Nazad</span>
+    </a>
+  </div>
 </header>
 
 
@@ -307,7 +291,7 @@
 
 
 
-<footer>
+<footer class="footer">
   <div class="footer-top">
     <h2>Dizajnirajte sa nama</h2>
     <p>Pridružite se našoj kreativnoj zajednici i unapredite svoj brend.</p>
@@ -315,31 +299,29 @@
 
   <div class="footer-menu">
     <ul>
-      <li><a href="index.html#hero">Početna</a></li>
-      <li><a href="index.html#usluge">Usluge</a></li>
-      <li><a href="index.html#portfolio">Projekti</a></li>
-      <li><a href="index.html#shop">Shop</a></li>
-      <li><a href="index.html#onama">O nama</a></li>
-      <li><a href="index.html#projekti">Sajtovi</a></li>
-      <li><a href="index.html#blog">Blog</a></li>
-      <li><a href="index.html#tim">Radovi</a></li>
+      <li><a href="index.html#services">Usluge</a></li>
+      <li><a href="index.html#promo">Promotivni proizvodi</a></li>
+      <li><a href="index.html#work">Radovi</a></li>
+      <li><a href="index.html#process">Proces</a></li>
+      <li><a href="index.html#packages">Ponuda</a></li>
+      <li><a href="index.html#about">O nama</a></li>
       <li><a href="index.html#faq">FAQ</a></li>
-      <li><a href="index.html#kontakt">Kontakt</a></li>
+      <li><a href="index.html#contact">Kontakt</a></li>
+      <li><a href="index.html#qr">QR</a></li>
+      <li><a href="gallery.html">Galerija</a></li>
     </ul>
   </div>
 
   <div class="footer-social">
-    <a href="https://www.instagram.com/dizajnstudio.rs/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@dizajn.studio" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/dizajnstudio.rs/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@dizajn.studio" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/share/1BpMcq2Bpg/?mibextid=wwXIfr" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
     <a href="tel:+381628210863"><i class="fas fa-phone"></i></a>
   </div>
 
   <div class="footer-bottom">
-    <p>Created by <a href="index.html#hero" style="color: #000; text-decoration: none;"><span style="color: #000;">Dizajn Studio</span></a> © 2025 | all rights reserved</p>
-    
-  <!-- Scroll to top dugme -->
-<button id="scrollTop" onclick="scrollToTop()">↑</button>
-
+    <p>Created by <a href="index.html#top" style="color: #000; text-decoration: none;"><span style="color: #000;">Dizajn Studio</span></a> © 2026 | sva prava zadržana</p>
+  </div>
 </footer>
 
 <!-- LIGHTBOX MODAL -->
