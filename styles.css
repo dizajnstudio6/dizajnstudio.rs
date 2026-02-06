@@ -729,6 +729,8 @@ section#reviews{
 }
 .qr-section-grid{
   margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .qr-crop{
   border-radius: calc(var(--radius-lg) - 6px);
@@ -850,6 +852,7 @@ section#reviews{
     display:grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+    justify-items: center;   /* centriraj kartice u svojim kolona */
   }
   .qr-crop{
     width: 130px;
@@ -2062,21 +2065,32 @@ footer {
 
 /* GALLERY header: simple (logo + back only) */
 .gallery-page .site-header.gallery-header{
-  background: rgba(255,255,255,0.96);
+  background: #ffffff;
   border-bottom: 1px solid var(--line);
+  color: var(--text);
 }
 .gallery-page .site-header.gallery-header.scrolled{
   box-shadow: var(--shadow-soft);
 }
 .gallery-page .site-header.gallery-header .brand strong{color: var(--text);}
 .gallery-page .site-header.gallery-header .brand span{color: var(--muted);}
+.gallery-page .site-header.gallery-header a,
+.gallery-page .site-header.gallery-header a:visited{
+  color: var(--text);
+}
+.gallery-page .site-header.gallery-header a:hover{
+  color: var(--accent);
+}
 .gallery-back{
   display:inline-flex;
   align-items:center;
   gap: 10px;
   white-space: nowrap;
+  font-weight: 500;
 }
-.gallery-back i{font-size: 14px;}
+.gallery-back i{
+  font-size: 14px;
+}
 
 .gallery {
   padding: 120px 40px 60px;
@@ -2118,6 +2132,37 @@ footer {
   display: block;
   cursor: pointer;
   transition: transform 0.3s ease;
+}
+
+/* GALLERY – centriranje na manjim ekranima */
+@media (max-width: 600px){
+  .gallery {
+    padding: 100px 16px 40px;
+  }
+  .gallery-content{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .gallery-item{
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px){
+  .gallery {
+    padding: 100px 16px 40px;
+  }
+  .gallery-content{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .gallery-item{
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
 
 .gallery-item img,
