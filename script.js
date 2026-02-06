@@ -1,41 +1,74 @@
 // HAMBURGER MENU TOGGLE
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburgerMenu = document.getElementById('hamburgerMenu');
-  const mainNav = document.getElementById('mainNav');
-  
-  if (hamburgerMenu && mainNav) {
-    hamburgerMenu.addEventListener('click', () => {
-      hamburgerMenu.classList.toggle('active');
-      mainNav.classList.toggle('active');
+  // Novi sistem (ovaj sa sajta Dizajn Studio)
+  const navToggle = document.getElementById('navToggle');
+  const siteNav  = document.getElementById('siteNav');
+
+  if (navToggle && siteNav) {
+    navToggle.addEventListener('click', () => {
+      const open = siteNav.dataset.open !== 'true';
+      siteNav.dataset.open = open ? 'true' : 'false';
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
     });
-    
-    // Close menu when clicking on a link
-    const navLinks = mainNav.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
+
+    // Zatvori overlay kada se klikne na bilo koji link u meniju
+    const links = siteNav.querySelectorAll('a');
+    links.forEach(link => {
       link.addEventListener('click', () => {
-        hamburgerMenu.classList.remove('active');
-        mainNav.classList.remove('active');
+        siteNav.dataset.open = 'false';
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Legacy sistem (hamburgerMenu/mainNav) za stari portfolio, ostavljen radi kompatibilnosti
+  const legacyHamburger = document.getElementById('hamburgerMenu');
+  const legacyNav = document.getElementById('mainNav');
+
+  if (legacyHamburger && legacyNav) {
+    legacyHamburger.addEventListener('click', () => {
+      legacyHamburger.classList.toggle('active');
+      legacyNav.classList.toggle('active');
+      document.body.classList.toggle('nav-open', legacyNav.classList.contains('active'));
+    });
+
+    const legacyLinks = legacyNav.querySelectorAll('a');
+    legacyLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        legacyHamburger.classList.remove('active');
+        legacyNav.classList.remove('active');
+        document.body.classList.remove('nav-open');
       });
     });
   }
 });
 
-// HEADER SHADOW ON SCROLL
+// HEADER SHADOW ON SCROLL (portfolio style)
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
-  if(window.scrollY>20) header.style.boxShadow="0 4px 20px rgba(0,0,0,0.1)";
-  else header.style.boxShadow="none";
-
+  if (header) {
+    if (window.scrollY > 20) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  }
   // Parallax hero bg
   const heroBg = document.querySelector(".hero-bg");
-  if(heroBg) heroBg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+  if (heroBg) heroBg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
 });
 
-// FAQ TOGGLE
-document.querySelectorAll(".faq-item").forEach(item => {
-  item.addEventListener("click", () => {
-    const answer = item.querySelector(".faq-answer");
-    answer.style.display = (answer.style.display==="block")?"none":"block";
+// FAQ (premium accordion)
+document.querySelectorAll(".faq-item").forEach((item) => {
+  const btn = item.querySelector(".faq-btn");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    const isOpen = item.getAttribute("data-open") === "true";
+    item.setAttribute("data-open", isOpen ? "false" : "true");
+    const icon = item.querySelector(".faq-icon");
+    if (icon) icon.textContent = isOpen ? "+" : "–";
   });
 });
 
@@ -128,43 +161,66 @@ function scrollToTop() {
   }
 }
 
-// CUSTOM CURSOR ANIMATION
-const cursorDot = document.createElement('div');
-cursorDot.classList.add('cursor-dot');
-cursorDot.textContent = 'DS';
-document.body.appendChild(cursorDot);
+// CUSTOM CURSOR ANIMATION – samo za desktop (ne prikazuje se ispod 1024px)
+let cursorDot, cursorCircle, cursorRAF;
+let mouseX = 0, mouseY = 0, dotX = 0, dotY = 0, circleX = 0, circleY = 0;
 
-const cursorCircle = document.createElement('div');
-cursorCircle.classList.add('cursor-circle');
-document.body.appendChild(cursorCircle);
-
-let mouseX = 0;
-let mouseY = 0;
-let dotX = 0;
-let dotY = 0;
-let circleX = 0;
-let circleY = 0;
-
-document.addEventListener('mousemove', (e) => {
+function onMouseMove(e) {
   mouseX = e.clientX;
   mouseY = e.clientY;
-});
+}
 
 function animateCursor() {
+  if (!cursorDot || !cursorCircle) return;
   dotX += (mouseX - dotX) * 0.5;
   dotY += (mouseY - dotY) * 0.5;
   circleX += (mouseX - circleX) * 0.15;
   circleY += (mouseY - circleY) * 0.15;
-
   cursorDot.style.left = dotX + 'px';
   cursorDot.style.top = dotY + 'px';
   cursorCircle.style.left = circleX + 'px';
   cursorCircle.style.top = circleY + 'px';
-
-  requestAnimationFrame(animateCursor);
+  cursorRAF = requestAnimationFrame(animateCursor);
 }
 
-animateCursor();
+function initCursor() {
+  if (window.innerWidth <= 1024) return;
+  if (cursorDot) return;
+  cursorDot = document.createElement('div');
+  cursorDot.classList.add('cursor-dot');
+  cursorDot.textContent = 'DS';
+  document.body.appendChild(cursorDot);
+  cursorCircle = document.createElement('div');
+  cursorCircle.classList.add('cursor-circle');
+  document.body.appendChild(cursorCircle);
+  document.addEventListener('mousemove', onMouseMove);
+  animateCursor();
+}
+
+function destroyCursor() {
+  if (cursorRAF) {
+    cancelAnimationFrame(cursorRAF);
+    cursorRAF = null;
+  }
+  if (cursorDot) {
+    cursorDot.remove();
+    cursorDot = null;
+  }
+  if (cursorCircle) {
+    cursorCircle.remove();
+    cursorCircle = null;
+  }
+  document.removeEventListener('mousemove', onMouseMove);
+}
+
+initCursor();
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 1024) {
+    destroyCursor();
+  } else if (!cursorDot) {
+    initCursor();
+  }
+});
 
 // -------------------- BLOG CAROUSEL --------------------
 document.addEventListener('DOMContentLoaded', () => {
@@ -207,7 +263,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize first slide
   showSlide(0);
 });
-
-
-
-
